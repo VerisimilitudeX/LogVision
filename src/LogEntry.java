@@ -15,7 +15,7 @@ public class LogEntry {
             bytesReturned = bytes;
       }
 
-      public String getIpAddress() {
+      public String getIPAddress() {
             return ipAddress;
       }
 

@@ -10,11 +10,16 @@ public class Tester {
 
     public void testLogAnalyzer() {
         LogAnalyzer la = new LogAnalyzer();
-        la.readFile("weblog1_log");
+        la.readFile("weblog2_log");
         la.printAll();
-        System.out.println("\nUnique IP Addresses: " + la.countUniqueIPs());
         la.printAllHigherThanNum(400);
-        la.uniqueIPVisitsOnDay("Mar 17");
+        la.uniqueIPVisitsOnDay("Sep 24");
         la.countUniqueIPsInRange(200,299);
+        System.out.println("\nVisits per IP: \n" + la.countVisitsPerIP());
+        System.out.println("\nUnique IPs: " + la.uniqueIPs());
+        System.out.println("Highest traffic: " + la.ipMostVisits(la.countVisitsPerIP()).get(0) + " -> " + la.mostNumberVisitsByIP(la.countVisitsPerIP()));
+        System.out.println("\nIPs for Days: \n" + la.ipsForDays());
+        System.out.println("\nDay with most visits: " + la.dayWithMostIPVisits(la.ipsForDays()));
+        System.out.println("\nIPs with most visits on day: " + la.ipsWithMostVisitsOnDay(la.ipsForDays(), "Sep 29"));
     }
 }
