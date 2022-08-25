@@ -10,7 +10,11 @@ public class Tester {
 
     public void testLogAnalyzer() {
         LogAnalyzer la = new LogAnalyzer();
-        la.readFile("short-test_log");
+        la.readFile("weblog1_log");
         la.printAll();
+        System.out.println("\nUnique IP Addresses: " + la.countUniqueIPs());
+        la.printAllHigherThanNum(400);
+        la.uniqueIPVisitsOnDay("Mar 17");
+        la.countUniqueIPsInRange(200,299);
     }
 }

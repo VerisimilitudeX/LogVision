@@ -1,19 +1,11 @@
-
-/**
- * Write a description of class LogRecord here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-
 import java.util.*;
 
 public class LogEntry {
-      private String ipAddress;
-      private Date accessTime;
-      private String request;
-      private int statusCode;
-      private int bytesReturned;
+      private final String ipAddress;
+      private final Date accessTime;
+      private final String request;
+      private final int statusCode;
+      private final int bytesReturned;
 
       public LogEntry(String ip, Date time, String req, int status, int bytes) {
             ipAddress = ip;
@@ -21,7 +13,6 @@ public class LogEntry {
             request = req;
             statusCode = status;
             bytesReturned = bytes;
-
       }
 
       public String getIpAddress() {
