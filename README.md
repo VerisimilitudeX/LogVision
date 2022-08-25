@@ -3,3 +3,14 @@
 
 ## Mechanisms
 Please refer to the following documention for more information on the Apache HTTP Server Version 2.4 logging format: https://httpd.apache.org/docs/2.4/logs.html
+
+## Features
+* Log file refactoring
+* IP address, access time, request, status code, and response size extraction
+* IP address analytics
+* User analytics per IP address
+* Error code analytics
+* Time and date analytics
+* Data transfer analytics
+* Highest traffic IP address, hits, bytes, and date
+* CSV output
