@@ -1,42 +1,41 @@
 import java.util.*;
 
 public class LogEntry {
-      private final String ipAddress;
-      private final Date accessTime;
-      private final String request;
-      private final int statusCode;
-      private final int bytesReturned;
+  private final String ipAddress;
+  private final Date accessTime;
+  private final String request;
+  private final int statusCode;
+  private final int bytesReturned;
 
-      public LogEntry(String ip, Date time, String req, int status, int bytes) {
-            ipAddress = ip;
-            accessTime = time;
-            request = req;
-            statusCode = status;
-            bytesReturned = bytes;
-      }
+  public LogEntry(String ip, Date time, String req, int status, int bytes) {
+    ipAddress = ip;
+    accessTime = time;
+    request = req;
+    statusCode = status;
+    bytesReturned = bytes;
+  }
 
-      public String getIPAddress() {
-            return ipAddress;
-      }
+  public String getIPAddress() {
+    return ipAddress;
+  }
 
-      public Date getAccessTime() {
-            return accessTime;
-      }
+  public Date getAccessTime() {
+    return accessTime;
+  }
 
-      public String getRequest() {
-            return request;
-      }
+  public String getRequest() {
+    return request;
+  }
 
-      public int getStatusCode() {
-            return statusCode;
-      }
+  public int getStatusCode() {
+    return statusCode;
+  }
 
-      public int getBytesReturned() {
-            return bytesReturned;
-      }
+  public int getBytesReturned() {
+    return bytesReturned;
+  }
 
-      public String toString() {
-            return ipAddress + " " + accessTime + " " + request
-                        + " " + statusCode + " " + bytesReturned;
-      }
+  public String toString() {
+    return ipAddress + " " + accessTime + " " + request + " " + statusCode + " " + bytesReturned;
+  }
 }
