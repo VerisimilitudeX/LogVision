@@ -1,4 +1,4 @@
-# LogVision for NovaSeq 6000  
+# IlluminaLogVision for NovaSeq 6000  
 > Effective management of Illumina NovaSeq 6000 workflows requires real-time insights into server logs, including activity, performance, and potential issues. This software parses and analyzes BaseSpace Sequence Hub and bcl2fastq logs to optimize epigenomic data pipelines.
 
 ## Mechanisms  
