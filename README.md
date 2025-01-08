@@ -1,38 +1,4 @@
 <html>
-<head>
-  <meta charset="UTF-8" />
-  <title>IlluminaLogVision README</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-      max-width: 800px;
-    }
-    h1, h2, h3 {
-      color: #1a1a1a;
-    }
-    code {
-      background-color: #f5f5f5;
-      padding: 2px 5px;
-      border-radius: 3px;
-    }
-    pre {
-      background-color: #f5f5f5;
-      padding: 10px;
-      border-radius: 5px;
-      overflow: auto;
-    }
-    section {
-      margin-bottom: 30px;
-    }
-    hr {
-      margin-top: 40px;
-      margin-bottom: 40px;
-    }
-  </style>
-</head>
-
 <body>
   <h1>IlluminaLogVision: Extended Epigenomic Analytics for NovaSeq 6000</h1>
 
