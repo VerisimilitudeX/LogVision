@@ -1,4 +1,3 @@
-
 public class Tester {
   public void testLogAnalyzer(String fileName) {
     IlluminaLogAnalyzer analyzer = new IlluminaLogAnalyzer();
@@ -12,8 +11,8 @@ public class Tester {
     System.out.println("Total Yield (Gb): " + analyzer.totalYieldGb());
     System.out.println("Average Q30: " + analyzer.averageQ30());
     System.out.println("HPC Usage Counts: " + analyzer.hpcUsageCounts());
-    System.out.println("Lanes Above Error Threshold (0.01): " 
-        + analyzer.lanesAboveErrorThreshold(0.01));
+    System.out.println(
+        "Lanes Above Error Threshold (0.01): " + analyzer.lanesAboveErrorThreshold(0.01));
 
     IlluminaLogEntryExtended maxReads = analyzer.maxReadCountEntry();
     if (maxReads != null) {

@@ -8,8 +8,10 @@ public class IlluminaLogParser {
       new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US);
 
   // This parser is designed to handle lines that look like:
-  // 0          1     2           3            4                                             5                        6         7       8    9    10     11         12           13            14
-  // RUN-20250903 Lane1 HPC-Node4 SN3000123456 /seqdata/... 2025-09-03T09:10:22Z 42000000 0.0030 315 38.2 91.5   Q30=88.9  Index=ACTG NGS-v2.2.1 bcl2fastq2.20
+  // 0          1     2           3            4                                             5
+  //                  6         7       8    9    10     11         12           13            14
+  // RUN-20250903 Lane1 HPC-Node4 SN3000123456 /seqdata/... 2025-09-03T09:10:22Z 42000000 0.0030 315
+  // 38.2 91.5   Q30=88.9  Index=ACTG NGS-v2.2.1 bcl2fastq2.20
   //
   // If the line doesn't have 15 fields, we'll do a fallback approach.
   public static IlluminaLogEntryExtended parseLine(String line) {
@@ -17,7 +19,7 @@ public class IlluminaLogParser {
     // For a fully extended log, we expect at least 15 fields.
     // But we can handle partial lines if needed.
     if (parts.length < 7) {
-      return null; 
+      return null;
     }
 
     // Indices for the columns we expect
@@ -26,8 +28,8 @@ public class IlluminaLogParser {
     String hpcNode = safePart(parts, 2);
     String machineSerial = safePart(parts, 3);
     String runFolderPath = safePart(parts, 4);
-    Date date = parseTimestamp( safePart(parts, 5) );
-    long readCount = parseLongSafely( safePart(parts, 6) );
+    Date date = parseTimestamp(safePart(parts, 5));
+    long readCount = parseLongSafely(safePart(parts, 6));
     double errorRate = 0.0;
     double clusterDensity = 0.0;
     double yieldGb = 0.0;
@@ -39,22 +41,22 @@ public class IlluminaLogParser {
 
     // If parts.length >= 8, parse errorRate from parts[7]
     if (parts.length > 7) {
-      errorRate = parseDoubleSafely( safePart(parts, 7) );
+      errorRate = parseDoubleSafely(safePart(parts, 7));
     }
     if (parts.length > 8) {
-      clusterDensity = parseDoubleSafely( safePart(parts, 8) );
+      clusterDensity = parseDoubleSafely(safePart(parts, 8));
     }
     if (parts.length > 9) {
-      yieldGb = parseDoubleSafely( safePart(parts, 9) );
+      yieldGb = parseDoubleSafely(safePart(parts, 9));
     }
     if (parts.length > 10) {
-      passFilter = parseDoubleSafely( safePart(parts, 10) );
+      passFilter = parseDoubleSafely(safePart(parts, 10));
     }
     if (parts.length > 11) {
-      q30 = parseQ30IfPresent( safePart(parts, 11) );
+      q30 = parseQ30IfPresent(safePart(parts, 11));
     }
     if (parts.length > 12) {
-      indexBarcode = parseIndexIfPresent( safePart(parts, 12) );
+      indexBarcode = parseIndexIfPresent(safePart(parts, 12));
     }
     if (parts.length > 13) {
       pipelineVersion = safePart(parts, 13);
@@ -78,8 +80,7 @@ public class IlluminaLogParser {
         q30,
         indexBarcode,
         pipelineVersion,
-        analysisSoftware
-    );
+        analysisSoftware);
   }
 
   private static String safePart(String[] arr, int index) {
