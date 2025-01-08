@@ -1,30 +1,16 @@
-import java.util.*;
-
 public class Tester {
-  public void testLogEntry() {
-    LogEntry le = new LogEntry("1.2.3.4", new Date(), "example request", 200, 500);
-    System.out.println(le);
-    LogEntry le2 = new LogEntry("1.2.100.4", new Date(), "example request 2", 300, 400);
-    System.out.println(le2);
-  }
-
   public void testLogAnalyzer() {
-    LogAnalyzer la = new LogAnalyzer();
-    la.readFile("weblog2_log");
-    la.printAll();
-    la.printAllHigherThanNum(400);
-    la.uniqueIPVisitsOnDay("Sep 24");
-    la.countUniqueIPsInRange(200, 299);
-    System.out.println("\nVisits per IP: \n" + la.countVisitsPerIP());
-    System.out.println("\nUnique IPs: " + la.uniqueIPs());
-    System.out.println(
-        "Highest traffic: "
-            + la.ipMostVisits(la.countVisitsPerIP()).get(0)
-            + " -> "
-            + la.mostNumberVisitsByIP(la.countVisitsPerIP()));
-    System.out.println("\nIPs for Days: \n" + la.ipsForDays());
-    System.out.println("\nDay with most visits: " + la.dayWithMostIPVisits(la.ipsForDays()));
-    System.out.println(
-        "\nIPs with most visits on day: " + la.ipsWithMostVisitsOnDay(la.ipsForDays(), "Sep 29"));
+    IlluminaLogAnalyzer analyzer = new IlluminaLogAnalyzer();
+    analyzer.readFile("example_illumina_log.txt");
+    analyzer.printAll();
+    System.out.println("\nAverage Error Rate: " + analyzer.averageErrorRate());
+    System.out.println("Average Cluster Density: " + analyzer.averageClusterDensity());
+    System.out.println("Total Reads: " + analyzer.totalReads());
+    System.out.println("Total Yield (Gb): " + analyzer.totalYieldGb());
+    System.out.println("Lanes Above Error Threshold (0.01): " + analyzer.lanesAboveErrorThreshold(0.01));
+    IlluminaLogEntry maxReads = analyzer.maxReadCountEntry();
+    if (maxReads != null) {
+      System.out.println("\nEntry with max reads: " + maxReads);
+    }
   }
 }
