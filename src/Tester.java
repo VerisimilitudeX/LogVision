@@ -7,7 +7,8 @@ public class Tester {
     System.out.println("Average Cluster Density: " + analyzer.averageClusterDensity());
     System.out.println("Total Reads: " + analyzer.totalReads());
     System.out.println("Total Yield (Gb): " + analyzer.totalYieldGb());
-    System.out.println("Lanes Above Error Threshold (0.01): " + analyzer.lanesAboveErrorThreshold(0.01));
+    System.out.println(
+        "Lanes Above Error Threshold (0.01): " + analyzer.lanesAboveErrorThreshold(0.01));
     IlluminaLogEntry maxReads = analyzer.maxReadCountEntry();
     if (maxReads != null) {
       System.out.println("\nEntry with max reads: " + maxReads);
