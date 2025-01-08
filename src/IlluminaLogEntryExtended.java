@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class FullIlluminaLogEntry {
+public class IlluminaLogEntryExtended {
   private final String runId;
   private final String lane;
   private final String hpcNode;
@@ -17,7 +17,7 @@ public class FullIlluminaLogEntry {
   private final String pipelineVersion;
   private final String analysisSoftware;
 
-  public FullIlluminaLogEntry(
+  public IlluminaLogEntryExtended(
       String runId,
       String lane,
       String hpcNode,
@@ -116,13 +116,13 @@ public class FullIlluminaLogEntry {
         + " "
         + lane
         + " "
-        + hpcNode
+        + (hpcNode == null ? "nullHPCNode" : hpcNode)
         + " "
-        + machineSerial
+        + (machineSerial == null ? "nullSN" : machineSerial)
         + " "
-        + runFolderPath
+        + (runFolderPath == null ? "nullPath" : runFolderPath)
         + " "
-        + timestamp
+        + (timestamp == null ? "nullDate" : timestamp)
         + " "
         + readCount
         + " "
@@ -136,10 +136,10 @@ public class FullIlluminaLogEntry {
         + " "
         + q30
         + " "
-        + indexBarcode
+        + (indexBarcode == null ? "nullIndex" : indexBarcode)
         + " "
-        + pipelineVersion
+        + (pipelineVersion == null ? "nullPipeline" : pipelineVersion)
         + " "
-        + analysisSoftware;
+        + (analysisSoftware == null ? "nullSoftware" : analysisSoftware);
   }
 }
