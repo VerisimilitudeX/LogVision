@@ -14,7 +14,7 @@
   </section>
 
   <section>
-    <h2>Scientific Rationale</h2>
+    <h2>Background</h2>
     <ul>
       <li><strong>Comprehensive Error Analytics:</strong> By capturing and standardizing error-rate 
       measurements, we offer in-depth insight into basecalling quality, which is crucial 
@@ -36,7 +36,7 @@
   </section>
 
   <section>
-    <h2>Core Features</h2>
+    <h2>Features</h2>
     <ul>
       <li><em>Extended Parsing Logic:</em> Reads HPC node details, run folder paths, Q30 figures, 
       indexing barcodes, pipeline versions, and additional fields beyond basic logs.</li>
@@ -93,40 +93,8 @@ RUN-20250903 Lane1 HPC-Node4 SN3000123456 /seqdata/210801_M04281_0123_000000000-
   </section>
 
   <section>
-    <h2>License and Contributing</h2>
-    <p>IlluminaLogVision is released under the MIT License. We invite the research community to 
-    contribute improvements or specialized fields for your local HPC environment, new epigenomic 
-    metrics, or emergent QC needs. Together, we can continually refine how labs manage and interpret 
-    vast sequencing data sets.</p>
-  </section>
-
-  <hr />
-
-  <section>
-    <h2>Release: IlluminaLogVision v3.1.0 – HPC & Epigenetics Advancement</h2>
-    <p>
-      We’re pleased to introduce <strong>IlluminaLogVision v3.1.0</strong>, enhancing HPC and 
-      epigenetic synergy in Illumina NovaSeq logs. Our new pipeline examines deeper variance-based 
-      metrics, ensuring more robust read quality for challenging epigenomic assays. 
-      Key improvements include:
-    </p>
-    <ul>
-      <li><strong>Unified HPC Monitoring:</strong> Track HPC node usage at scale, facilitating 
-      real-time load balancing for emergent bisulfite or histone modification workflows.</li>
-      <li><strong>Precision Q30 Integration:</strong> Increased fidelity in Q30 parsing, critical 
-      for capturing subtle base-modification patterns in epigenomic libraries.</li>
-      <li><strong>Advanced Variance and Standard Deviation Tools:</strong> Error-rate distributions 
-      now reflect complexities in library composition and HPC concurrency, assisting in 
-      troubleshooting or preempting run failures.</li>
-      <li><strong>Streamlined Methylation QC:</strong> For labs verifying CpG coverage, the new 
-      analytics output aids in consistent tracking of cluster density across multiple HPC nodes, 
-      supporting precise comparisons across runs.</li>
-    </ul>
-    <p>
-      We appreciate contributions from our research user base. This release underscores our ongoing 
-      dedication to HPC-driven epigenomics, bridging the gap between raw sequencing logs and 
-      deep biological inference.
-    </p>
+    <h2>License</h2>
+    <p>MIT License</p>
   </section>
 
 </body>
