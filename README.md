@@ -92,6 +92,20 @@ RUN-20250903 Lane1 HPC-Node4 SN3000123456 /seqdata/210801_M04281_0123_000000000-
     </ul>
   </section>
 
+  ## 12. Stars
+Researchers employing DNAnalyzer in their investigations are encouraged to star this repository. Such engagement strengthens community collaboration and perpetuates open-source innovation.
+
+<a href="https://star-history.com/#VerisimilitudeX/IlluminaLogVision&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)"
+            srcset="https://api.star-history.com/svg?repos=VerisimilitudeX/IlluminaLogVision&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)"
+            srcset="https://api.star-history.com/svg?repos=VerisimilitudeX/IlluminaLogVision&type=Date" />
+    <img alt="Star History Chart"
+         src="https://api.star-history.com/svg?repos=VerisimilitudeX/IlluminaLogVision&type=Date" />
+  </picture>
+</a>
+
   <section>
     <h2>License</h2>
     <p>MIT License</p>
